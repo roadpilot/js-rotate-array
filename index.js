@@ -34,7 +34,22 @@ function readLine() {
 
 function circularArrayRotation(a, k, queries) {
     // Write your code here
- 
+    const alen = a.length
+    const modu = k % alen
+    // if (modu == 0){
+    //     // return here
+    // } 
+    // if (modu > alen / 2){
+        
+    // }
+    // else {
+        
+    // }
+    for (let i = 0; i < modu; i++){
+        a.unshift(a.pop())
+    }
+    // console.log (a)
+    return queries.map(el => a[el])
 }
 
 function main() {
